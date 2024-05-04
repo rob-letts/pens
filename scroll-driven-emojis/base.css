@@ -1,0 +1,41 @@
+@layer base, pen;
+
+@layer pen {
+  div {
+    animation: scrollz ease-in;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scrollz {
+    to {
+      scale: calc(0.7 * var(--index));
+      translate: 0 calc(-1.5rem * var(--index));
+    }
+  }
+}
+
+@layer base {
+  div {
+    block-size: 4rem;
+    aspect-ratio: 1;
+    color: white;
+    border-radius: 8px;
+    background-color: hotpink;
+    align-content: center;
+    text-align: center;
+    margin-inline: auto;
+    border: 1px solid black;
+    outline: 1px solid white;
+    outline-offset: -2px;
+
+    &:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+  }
+
+  body {
+    align-content: center;
+    inline-size: 100%;
+    background-color: limegreen;
+  }
+}

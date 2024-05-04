@@ -1,0 +1,37 @@
+@layer base, pen;
+
+@layer pen {
+  :root {
+    --not-red: 20px;
+  }
+
+  .blue {
+    /*
+  20px is an invalid color item, so the previously declared value is used.
+  */
+    color: blue;
+    color: 20px;
+  }
+
+  .red {
+    /*
+    Both these values have been blown away by the time the custom
+    property value has been determined as 'invalid'. This is because the custom property wins the cascaded value evaluation, but is revealed to be an 'invalid' value at 'computed' value time.
+  */
+    color: red;
+    color: var(--not-red);
+  }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    align-content: center;
+    text-align: center;
+    height: 50vh;
+    font-family: system-ui;
+  }
+}

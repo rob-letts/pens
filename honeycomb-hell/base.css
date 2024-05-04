@@ -1,0 +1,56 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.grid {
+  --dimensions: min(80vw, 400px);
+  display: grid;
+  width: var(--dimensions);
+  aspect-ratio: 1;
+  grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+}
+
+.cell {
+  display: inherit;
+  grid-template: inherit;
+  background-color: yellow;
+  border: 1px solid black;
+  animation: 3s infinite cell-swell;
+  transition: scale 1s ease-out;
+
+  &:hover {
+    animation: 1s shift;
+  }
+}
+
+.inner-cell {
+  border: 1px solid black;
+  animation: 2s ease-out scatter infinite paused;
+}
+
+@keyframes cell-swell {
+  50% {
+    scale: 0.8;
+  }
+}
+
+@keyframes shift {
+  50% {
+    translate: 0 -1px;
+  }
+}
+
+@keyframes scatter {
+  50% {
+    translate: var(--v) var(--h);
+  }
+}

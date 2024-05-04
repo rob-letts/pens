@@ -1,0 +1,68 @@
+@layer base, pen;
+
+@layer pen {
+  body {
+    background: conic-gradient(from 0.5turn at bottom center, lightblue, white);
+  }
+
+  .button {
+    background: coral;
+    border: none;
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: translate 0.5s ease-in;
+    translate: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 1px dashed black;
+      outline-offset: -4px;
+    }
+  }
+
+  .input {
+    border: none;
+    padding: 1rem;
+    outline: none;
+
+    &:placeholder-shown:has(+ .button:focus) {
+      color: orange;
+      translate: 4rem;
+    }
+
+    &:not(:placeholder-shown) + .button {
+      translate: 0;
+    }
+  }
+
+  .split-input {
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    &:focus-within {
+      outline: 2px solid black;
+    }
+  }
+}
+
+/* Uninteresting stuff */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100dvh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+}

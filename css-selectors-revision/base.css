@@ -1,0 +1,101 @@
+@layer level-1 {
+  /* Type */
+  body {
+    background: var(--pink);
+  }
+
+  /* Descendent */
+  body main {
+  }
+
+  /* ID */
+  #main {
+  }
+
+  /* Class */
+  .main {
+  }
+
+  /* Active */
+  :active {
+  }
+
+  /* Link */
+  :link {
+  }
+}
+
+@layer level-2 {
+  /* CSS Selectors Level 2 */
+
+  /* Universal */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Lang */
+  :lang(en) {
+  }
+
+  /* User Action */
+  button:hover,
+  button:focus {
+    outline: 4px solid var(--green);
+  }
+
+  /* Structural */
+  :first-child {
+  }
+
+  /* Attribute */
+  [href^="rob"] {
+  }
+
+  /* Child */
+  button first-child {
+  }
+
+  /* Adjacent Sibling */
+  button + a {
+  }
+}
+
+@layer level-3 {
+  /*  TODO!  */
+}
+
+@layer level-4 {
+  /*  TODO!  */
+}
+
+@layer base {
+  :root {
+    --pink: oklch(70% 0.17 322.94);
+    --orange: oklch(77.65% 0.158 68.82);
+    --green: oklch(82.94% 0.264 141.88);
+  }
+
+  body {
+    height: 100vh;
+    text-align: center;
+    font-family: system-ui;
+  }
+
+  main {
+    height: 50%;
+    align-content: center;
+  }
+
+  button {
+    display: block;
+    margin-inline: auto;
+    margin-block-end: 1rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 4px;
+    padding-block: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+@layer base, level-1, level-2, level-3, level-4;

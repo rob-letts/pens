@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+:root {
+  --text-h: 360;
+  --text-color: hsl(
+    var(--text-h)
+    100%
+    50%
+  )
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Lato, sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+span {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  transition: all 4s linear;
+
+  &:hover {
+    margin: 1rem;
+    scale: 1.5;
+    color: var(--text-color);
+    transition: all 0.1s ease-out;
+  }
+}
