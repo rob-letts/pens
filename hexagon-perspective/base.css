@@ -1,0 +1,60 @@
+body {
+  background: black;
+}
+
+main {
+  perspective: 500px;
+}
+
+.box {
+  position: absolute;
+  inset: 0;
+  border: 3px solid hotpink;
+  height: 100px;
+  aspect-ratio: 1;
+  opacity: 0.5;
+  margin-inline: auto;
+  border-radius: 2px;
+  margin-block-start: 5rem;
+  transform-style: preserve-3d;
+  transform:
+    rotateX(var(--x, 0deg))
+    rotateY(var(--y, 0deg))
+    translateZ(var(--z, 0px));
+}
+
+.one {
+  --x: 0deg;
+  --y: 60deg;
+  --z: -90px;
+}
+
+.two {
+  --x: 0deg;
+  --y: 120deg;
+  --z: -90px;
+}
+
+.three {
+  --x: 0deg;
+  --y: 180deg;
+  --z: -90px;
+}
+
+.four {
+  --x: 0deg;
+  --y: 240deg;
+  --z: -90px;
+}
+
+.five {
+  --x: 0deg;
+  --y: 300deg;
+  --z: -90px;
+}
+
+.six {
+  --x: 0deg;
+  --y: 360deg;
+  --z: -90px;
+}
