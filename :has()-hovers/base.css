@@ -1,0 +1,134 @@
+@layer base, pen;
+
+@layer pen {
+  body {
+    --bg: oklch(91.64% 0.073 77.44);
+    background-color: var(--bg);
+    text-align: center;
+    align-content: center;
+  }
+
+  li {
+    text-align: center;
+    align-content: center;
+    background: white;
+    width: 80%;
+    margin-inline: auto;
+    cursor: pointer;
+    background-color: var(--bg);
+  }
+
+  ol {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(5, 5rem);
+    --offset: 0;
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:has(li:nth-child(2):hover) {
+      &::before {
+        --offset: 1;
+      }
+    }
+
+    &:has(li:nth-child(3):hover) {
+      &::before {
+        --offset: 2;
+      }
+    }
+
+    &:has(li:nth-child(4):hover) {
+      &::before {
+        --offset: 3;
+      }
+    }
+
+    &:has(li:nth-child(5):hover) {
+      &::before {
+        --offset: 4;
+      }
+    }
+
+    &::before {
+      content: "";
+      opacity: 0;
+      transition: all 0.25s ease-in 0.1s;
+      position: absolute;
+      width: 81%;
+      margin-inline: auto;
+      height: 5rem;
+      z-index: -1;
+      inset: 0;
+      background-color: oklch(70% 0.17 calc((360 / 5) * (var(--offset) + 1)));
+      pointer-events: none;
+      translate: 0 calc(5rem * var(--offset));
+    }
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    height: 100%;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+      segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+      arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  :where(ul, ol) {
+    list-style: none;
+  }
+
+  :where(img, picture, video, iframe, svg) {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  :where(p, h1, h2, h3, h4, h5, h6, li, dl, dt, blockquote) {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  :where(input, button, textarea, select) {
+    font: inherit;
+  }
+
+  @media (prefers-reduced-motion) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
