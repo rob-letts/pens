@@ -1,0 +1,36 @@
+::view-transition-old(heading) {
+  scale: 0;
+}
+
+::view-transition-new(heading) {
+  scale: 1;
+}
+
+h1 {
+  text-align: center;
+  view-transition-name: heading;
+}
+
+body {
+  font-family: system-ui;
+  background-color: black;
+  color: white;
+}
+
+button {
+  color: inherit;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin-inline: auto;
+  display: block;
+  border-color: white;
+  background-color: inherit;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
