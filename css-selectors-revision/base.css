@@ -38,8 +38,7 @@
   }
 
   /* User Action */
-  button:hover,
-  button:focus {
+  button:hover:focus {
     outline: 4px solid var(--green);
   }
 
@@ -48,7 +47,7 @@
   }
 
   /* Attribute */
-  [href^="rob"] {
+  [href="rob"] {
   }
 
   /* Child */
@@ -61,11 +60,99 @@
 }
 
 @layer level-3 {
-  /*  TODO!  */
+  /* Attribute (Starts with, ends with, contains) */
+  [class^=""][class$=""][class*=""] {}
+
+  /* Target */
+  :target {}
+
+  /* Checked */
+  :checked {}
+
+  /* Not */
+  :not(x)
+
+  /* General Sibling */
+  a ~ b {}
+
+  /* Enabled / Disabled */
+  :enabled:disabled
+
+/*   :root / :empty / :last-child / :only-child / :first-of-type / :last-of-type / :only-of-type / :nth-child(n) / :nth-last-child(n) / :nth-of-type(n) / :nth-last-of-type(n) */
 }
 
 @layer level-4 {
-  /*  TODO!  */
+/* Case Insensitive Attributes */
+[class="selector" i] {}
+
+/* Blank */
+:blank {}
+
+/* nth-child */
+:nth-child(1):nth-child(odd):nth-child(even):nth-child(1 of selector):nth-child(3n + 1) {}
+
+/* Dir */
+:dir(ltr) {}
+
+/* Any Link */
+:any-link {}
+
+/* Local Link */
+:local-link {}
+
+/* Is */
+:is(.selector) {}
+
+/* where */
+:where(.selector) {}
+
+/* Mutability */
+:read-only:read-write {}
+
+/* Not */
+:not(.selector) {}
+
+/* Optionality */
+:required:optional {}
+
+/* Placeholder Shown */
+:placeholder-shown {}
+
+/* Indeterminate */
+:indeterminate {}
+
+/* Validity */
+:valid:invalid:user-invalid {}
+
+/* Has */
+:has(*) {}
+
+/* Scope */
+:scope {}
+
+/* Range */
+:in-range:out-of-range {}
+
+/* Cols */
+:nth-col(n):nth-last-col(n) {}
+
+/* Time */
+:current / :past / :future {}
+
+/* Default */
+:default {}
+
+/* Focus Within */
+:focus-within {}
+
+/* Focus Visible */
+:focus-visible {}
+
+/* Target Within */
+:target-within {}
+
+/* Column Combinator */
+E || F {}
 }
 
 @layer base {
