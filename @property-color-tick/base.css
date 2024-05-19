@@ -1,0 +1,26 @@
+@property --hue {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: true
+}
+
+@keyframes tick {
+  from { --hue: 0 }
+  to   { --hue: 360 }
+}
+
+:root {
+  animation: tick 3s linear infinite;
+}
+
+h1 {
+  color: hsl(var(--hue), 100%, 50%);
+}
+
+body {
+  font-family: system-ui;
+  text-align: center;
+  padding: 5rem;
+  align-content: center;
+  background-color: black;
+}
