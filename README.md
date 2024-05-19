@@ -1,3 +1,7 @@
+# Pens
+
+<p>Bunch of demos and sketches</p>
+
 <ol>
   <li>
     <a href="https://codepen.io/rob-letts/full/MWqoWqx">
@@ -41,12 +45,32 @@
   </li>
   <li>
     <a href="https://codepen.io/rob-letts/full/mdgYbZq">
-      CSS Selectors Revision [WIP]
+      CSS Selectors Level 1-4 Cheat Sheet
     </a>
   </li>
   <li>
     <a href="https://codepen.io/rob-letts/details/abxgQKN">
       Scroll-Driven Emojis [Chrome Only]
+    </a>
+  </li>
+  <li>
+    <a href="https://codepen.io/rob-letts/pen/GRLVqMM">
+      :has() Hovers
+    </a>
+  </li>
+  <li>
+    <a href="https://codepen.io/rob-letts/pen/jOoNMgb">
+      View Transition Sketch
+    </a>
+  </li>
+  <li>
+    <a href="https://codepen.io/rob-letts/pen/dyEbVda">
+      Hexagon Perspective
+    </a>
+  </li>
+  <li>
+    <a href="https://codepen.io/rob-letts/pen/QWRWqxN">
+      @property Color Ticket
     </a>
   </li>
 </ol>
