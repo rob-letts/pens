@@ -39,11 +39,6 @@
     </a>
   </li>
   <li>
-    <a href="https://codepen.io/rob-letts/full/vYMZOBo">
-      SVG Blurs [WIP]
-    </a>
-  </li>
-  <li>
     <a href="https://codepen.io/rob-letts/full/mdgYbZq">
       CSS Selectors Level 1-4 Cheat Sheet
     </a>
@@ -64,13 +59,16 @@
     </a>
   </li>
   <li>
-    <a href="https://codepen.io/rob-letts/pen/dyEbVda">
-      Hexagon Perspective
+    <a href="https://codepen.io/rob-letts/pen/QWRWqxN">
+      @property Color Tick
     </a>
   </li>
   <li>
     <a href="https://codepen.io/rob-letts/pen/QWRWqxN">
-      @property Color Ticket
+      Gridswells
     </a>
+  </li>
+  <li>
+    [Anchor Experiment](https://codepen.io/rob-letts/pen/dyxNbMR)
   </li>
 </ol>
