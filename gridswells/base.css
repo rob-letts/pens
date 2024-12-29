@@ -1,0 +1,60 @@
+body {
+  height: 100vh;
+  background: black;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  grid: repeat(8, 1rem) / repeat(8, 1rem);
+}
+
+.cell {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  aspect-ratio: 1;
+  height: 1rem;
+  transition: scale 0.2s ease-in;
+  animation-play-state: paused;
+
+  &:hover {
+    scale: 1.25;
+  }
+
+  &:active {
+    scale: 0.75;
+  }
+
+  &:first-of-type {
+    border-start-start-radius: 2px;
+  }
+
+  &:nth-of-type(8) {
+    border-start-end-radius: 2px;
+  }
+
+  &:nth-of-type(57) {
+    border-end-start-radius: 2px;
+  }
+
+  &:last-of-type {
+    border-end-end-radius: 2px;
+  }
+
+  &.animate {
+    animation: change-color 1s ease-in;
+    animation-delay: var(--delay, 0);
+  }
+}
+
+@keyframes change-color {
+  50% {
+    scale: 1.25;
+    background-color: orange;
+  }
+}
+
