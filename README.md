@@ -69,6 +69,8 @@
     </a>
   </li>
   <li>
-    [Anchor Experiment](https://codepen.io/rob-letts/pen/dyxNbMR)
+    <a href="https://codepen.io/rob-letts/pen/dyxNbMR">
+      Anchor Experiment
+    </a>
   </li>
 </ol>
